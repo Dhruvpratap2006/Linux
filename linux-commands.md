@@ -1,6 +1,6 @@
 # 🐧 Complete Linux Terminal & Command-Line Guide
 
-A production-ready, interactive command reference with direct anchor navigation, quick-copy terminal code blocks, real-world examples, and collapsible deep dives.
+A production-ready, interactive command reference with direct anchor navigation, quick-copy terminal code blocks, real-world examples, and open reference breakdowns.
 
 ---
 
@@ -100,15 +100,13 @@ drwxr-xr-x  2 dhruv dhruv 4.0K Sep  9 18:25 project1
 -rw-r--r--  1 dhruv dhruv 1.2K Sep  9 18:30 notes.txt
 ```
 
-<details>
-<summary>🔍 <b>Flag Breakdown</b></summary>
+#### 🔍 Flag Breakdown (Always Visible)
 
 | Flag | Name | Function |
 | :--- | :--- | :--- |
 | `-l` | Long listing | Shows file permissions, link count, owner, group, size, and date |
 | `-a` | All | Includes hidden dotfiles (e.g., `.bashrc`, `.env`, `.git`) |
 | `-h` | Human-readable | Displays sizes in readable bytes (`4.0K`, `12M`, `2.1G`) |
-</details>
 
 [▲ Back to Table of Contents](#-table-of-contents)
 
@@ -134,8 +132,7 @@ Switches your shell's active working directory to the specified destination path
 cd project1
 ```
 
-<details>
-<summary>🔍 <b>Example Walkthrough</b></summary>
+#### 🔍 Example Walkthrough (Always Visible)
 
 ```bash
 # Verify initial location
@@ -149,7 +146,6 @@ cd project1
 pwd
 # /home/dhruv/project1
 ```
-</details>
 
 [▲ Back to Table of Contents](#-table-of-contents)
 
