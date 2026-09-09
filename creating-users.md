@@ -1,24 +1,28 @@
-Now for creting user we can write the commands
+### 👤 User & Privilege Management
+* [21. `adduser` — Create a New User Account](#21-adduser--create-a-new-user-account)
+* [22. `su -` — Switch to User Account](#22-su---switch-to-user-account)
+* [23. `exit` — Log Out of Current Session](#23-exit--log-out-of-current-session)
+* [24. `usermod -aG sudo` — Grant Sudo (Admin) Privileges](#24-usermod--ag-sudo--grant-sudo-admin-privileges)
+* [25. `deluser <user> sudo` — Revoke Sudo Privileges](#25-deluser-user-sudo--revoke-sudo-privileges)
 
-sudo adduser "Account Name"
-<!-- then it will ask the your root account password -> type it and enter
-then set new account password -->
+---
 
-Now to go from root account to new account type 
-su - NewAccountName
+## ⚡ User Privilege Matrix
 
-to exit from current account type exit
+| Command | Shorthand Syntax | Core Operation | Risk Level |
+| :--- | :--- | :--- | :--- |
+| **`adduser`** | `sudo adduser <name>` | Create new user profile with home directory | Medium |
+| **`su -`** | `su - <name>` | Switch user with loaded environment | Low |
+| **`exit`** | `exit` | Terminate session / return to caller shell | Low |
+| **`usermod`** | `sudo usermod -aG sudo <name>` | Append user to sudo admin group | 🚨 High |
+| **`deluser`** | `sudo deluser <name> sudo` | Revoke administrative root permissions | Medium |
 
-<!-- now imp info -->
-Only root user has complete excess of the machine new user can do things but do not have full excess like root user 
-for ex if we write with new acount sudo apt update then this will not executes 
+---
 
-but if we want we can gave complete excess and it will have all powers like root user
+## 👤 User & Privilege Management
 
-sudo usermod -aG sudo AccountName
+### 21. `adduser` — Create a New User Account
+Creates a complete user environment, including a home directory (`/home/<username>`), dedicated user group, and default shell configuration.
 
-now re-login to new account su - AccouintName
-now type it will update
-
-to take all rights back from new Account write
-sudo deluser newAccountname sudo
+```bash
+sudo adduser newuser
